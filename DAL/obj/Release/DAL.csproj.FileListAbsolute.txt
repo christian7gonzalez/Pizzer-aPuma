@@ -1,0 +1,9 @@
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\bin\Release\DAL.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\bin\Release\DAL.pdb
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\bin\Release\Entidades.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\bin\Release\Entidades.pdb
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\obj\Release\DAL.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\DAL\obj\Release\DAL.pdb

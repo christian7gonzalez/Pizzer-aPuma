@@ -1,0 +1,7 @@
+C:\Users\Christian Gonzalez\source\repos\Puma\Tickets\bin\Debug\Tickets.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Tickets\bin\Debug\Tickets.pdb
+C:\Users\Christian Gonzalez\source\repos\Puma\Tickets\obj\Debug\CrearTicketVenta.csprojAssemblyReference.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\Tickets\obj\Debug\CrearTicketVenta.csproj.ResolveComReference.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\Tickets\obj\Debug\CrearTicketVenta.csproj.CoreCompileInputs.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\Tickets\obj\Debug\Tickets.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Tickets\obj\Debug\Tickets.pdb

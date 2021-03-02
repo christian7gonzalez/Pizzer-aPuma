@@ -1,0 +1,13 @@
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\bin\Debug\Bussiness.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\bin\Debug\Bussiness.pdb
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\bin\Debug\DAL.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\bin\Debug\Entidades.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\bin\Debug\Tickets.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\bin\Debug\DAL.pdb
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\bin\Debug\Entidades.pdb
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\bin\Debug\Tickets.pdb
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\obj\Debug\Bussiness.csprojAssemblyReference.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\obj\Debug\Bussiness.csproj.CoreCompileInputs.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\obj\Debug\Bussiness.csproj.CopyComplete
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\obj\Debug\Bussiness.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Bussiness\obj\Debug\Bussiness.pdb

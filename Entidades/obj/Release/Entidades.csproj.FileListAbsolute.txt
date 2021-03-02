@@ -1,0 +1,6 @@
+C:\Users\Christian Gonzalez\source\repos\Puma\Entidades\bin\Release\Entidades.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Entidades\bin\Release\Entidades.pdb
+C:\Users\Christian Gonzalez\source\repos\Puma\Entidades\obj\Release\Entidades.csprojAssemblyReference.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Christian Gonzalez\source\repos\Puma\Entidades\obj\Release\Entidades.dll
+C:\Users\Christian Gonzalez\source\repos\Puma\Entidades\obj\Release\Entidades.pdb

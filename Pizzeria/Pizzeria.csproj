@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D0C63CB-7E44-4FE5-8E76-7C0CA81AF6B5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pizzeria</RootNamespace>
+    <AssemblyName>Pizzeria</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44363</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.9</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Contactame.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Cuentas.aspx" />
+    <Content Include="Datepicker\lib\compressed\legacy.js" />
+    <Content Include="Datepicker\lib\compressed\picker.date.js" />
+    <Content Include="Datepicker\lib\compressed\picker.js" />
+    <Content Include="Datepicker\lib\compressed\picker.time.js" />
+    <Content Include="Datepicker\lib\compressed\themes\classic.css" />
+    <Content Include="Datepicker\lib\compressed\themes\classic.date.css" />
+    <Content Include="Datepicker\lib\compressed\themes\classic.time.css" />
+    <Content Include="Datepicker\lib\compressed\themes\default.css" />
+    <Content Include="Datepicker\lib\compressed\themes\default.date.css" />
+    <Content Include="Datepicker\lib\compressed\themes\default.time.css" />
+    <Content Include="Datepicker\lib\compressed\themes\rtl.css" />
+    <Content Include="Datepicker\lib\compressed\translations\ar.js" />
+    <Content Include="Datepicker\lib\compressed\translations\bg_BG.js" />
+    <Content Include="Datepicker\lib\compressed\translations\bs_BA.js" />
+    <Content Include="Datepicker\lib\compressed\translations\ca_ES.js" />
+    <Content Include="Datepicker\lib\compressed\translations\cs_CZ.js" />
+    <Content Include="Datepicker\lib\compressed\translations\da_DK.js" />
+    <Content Include="Datepicker\lib\compressed\translations\de_DE.js" />
+    <Content Include="Datepicker\lib\compressed\translations\el_GR.js" />
+    <Content Include="Datepicker\lib\compressed\translations\es_ES.js" />
+    <Content Include="Datepicker\lib\compressed\translations\et_EE.js" />
+    <Content Include="Datepicker\lib\compressed\translations\eu_ES.js" />
+    <Content Include="Datepicker\lib\compressed\translations\fa_IR.js" />
+    <Content Include="Datepicker\lib\compressed\translations\fi_FI.js" />
+    <Content Include="Datepicker\lib\compressed\translations\fr_FR.js" />
+    <Content Include="Datepicker\lib\compressed\translations\ge_GEO.js" />
+    <Content Include="Datepicker\lib\compressed\translations\gl_ES.js" />
+    <Content Include="Datepicker\lib\compressed\translations\he_IL.js" />
+    <Content Include="Datepicker\lib\compressed\translations\hi_IN.js" />
+    <Content Include="Datepicker\lib\compressed\translations\hr_HR.js" />
+    <Content Include="Datepicker\lib\compressed\translations\hu_HU.js" />
+    <Content Include="Datepicker\lib\compressed\translations\id_ID.js" />
+    <Content Include="Datepicker\lib\compressed\translations\is_IS.js" />
+    <Content Include="Datepicker\lib\compressed\translations\it_IT.js" />
+    <Content Include="Datepicker\lib\compressed\translations\ja_JP.js" />
+    <Content Include="Datepicker\lib\compressed\translations\km_KH.js" />
+    <Content Include="Datepicker\lib\compressed\translations\ko_KR.js" />
+    <Content Include="Datepicker\lib\compressed\translations\lt_LT.js" />
+    <Content Include="Datepicker\lib\compressed\translations\lv_LV.js" />
+    <Content Include="Datepicker\lib\compressed\translations\nb_NO.js" />
+    <Content Include="Datepicker\lib\compressed\translations\ne_NP.js" />
+    <Content Include="Datepicker\lib\compressed\translations\nl_NL.js" />
+    <Content Include="Datepicker\lib\compressed\translations\no_NO.js" />
+    <Content Include="Datepicker\lib\compressed\translations\pl_PL.js" />
+    <Content Include="Datepicker\lib\compressed\translations\pt_BR.js" />
+    <Content Include="Datepicker\lib\compressed\translations\pt_PT.js" />
+    <Content Include="Datepicker\lib\compressed\translations\ro_RO.js" />
+    <Content Include="Datepicker\lib\compressed\translations\ru_RU.js" />
+    <Content Include="Datepicker\lib\compressed\translations\sk_SK.js" />
+    <Content Include="Datepicker\lib\compressed\translations\sl_SI.js" />
+    <Content Include="Datepicker\lib\compressed\translations\sr_RS_cy.js" />
+    <Content Include="Datepicker\lib\compressed\translations\sr_RS_lt.js" />
+    <Content Include="Datepicker\lib\compressed\translations\sv_SE.js" />
+    <Content Include="Datepicker\lib\compressed\translations\th_TH.js" />
+    <Content Include="Datepicker\lib\compressed\translations\tr_TR.js" />
+    <Content Include="Datepicker\lib\compressed\translations\uk_UA.js" />
+    <Content Include="Datepicker\lib\compressed\translations\vi_VN.js" />
+    <Content Include="Datepicker\lib\compressed\translations\zh_CN.js" />
+    <Content Include="Datepicker\lib\compressed\translations\zh_TW.js" />
+    <Content Include="Datepicker\lib\jquery.js" />
+    <Content Include="Datepicker\lib\legacy.js" />
+    <Content Include="Datepicker\lib\picker.date.js" />
+    <Content Include="Datepicker\lib\picker.js" />
+    <Content Include="Datepicker\lib\picker.time.js" />
+    <Content Include="Datepicker\lib\themes\classic.css" />
+    <Content Include="Datepicker\lib\themes\classic.date.css" />
+    <Content Include="Datepicker\lib\themes\classic.time.css" />
+    <Content Include="Datepicker\lib\themes\default.css" />
+    <Content Include="Datepicker\lib\themes\default.date.css" />
+    <Content Include="Datepicker\lib\themes\default.time.css" />
+    <Content Include="Datepicker\lib\themes\rtl.css" />
+    <Content Include="Datepicker\lib\translations\ar.js" />
+    <Content Include="Datepicker\lib\translations\bg_BG.js" />
+    <Content Include="Datepicker\lib\translations\bs_BA.js" />
+    <Content Include="Datepicker\lib\translations\ca_ES.js" />
+    <Content Include="Datepicker\lib\translations\cs_CZ.js" />
+    <Content Include="Datepicker\lib\translations\da_DK.js" />
+    <Content Include="Datepicker\lib\translations\de_DE.js" />
+    <Content Include="Datepicker\lib\translations\el_GR.js" />
+    <Content Include="Datepicker\lib\translations\es_ES.js" />
+    <Content Include="Datepicker\lib\translations\et_EE.js" />
+    <Content Include="Datepicker\lib\translations\eu_ES.js" />
+    <Content Include="Datepicker\lib\translations\fa_IR.js" />
+    <Content Include="Datepicker\lib\translations\fi_FI.js" />
+    <Content Include="Datepicker\lib\translations\fr_FR.js" />
+    <Content Include="Datepicker\lib\translations\ge_GEO.js" />
+    <Content Include="Datepicker\lib\translations\gl_ES.js" />
+    <Content Include="Datepicker\lib\translations\he_IL.js" />
+    <Content Include="Datepicker\lib\translations\hi_IN.js" />
+    <Content Include="Datepicker\lib\translations\hr_HR.js" />
+    <Content Include="Datepicker\lib\translations\hu_HU.js" />
+    <Content Include="Datepicker\lib\translations\id_ID.js" />
+    <Content Include="Datepicker\lib\translations\is_IS.js" />
+    <Content Include="Datepicker\lib\translations\it_IT.js" />
+    <Content Include="Datepicker\lib\translations\ja_JP.js" />
+    <Content Include="Datepicker\lib\translations\km_KH.js" />
+    <Content Include="Datepicker\lib\translations\ko_KR.js" />
+    <Content Include="Datepicker\lib\translations\lt_LT.js" />
+    <Content Include="Datepicker\lib\translations\lv_LV.js" />
+    <Content Include="Datepicker\lib\translations\nb_NO.js" />
+    <Content Include="Datepicker\lib\translations\ne_NP.js" />
+    <Content Include="Datepicker\lib\translations\nl_NL.js" />
+    <Content Include="Datepicker\lib\translations\pl_PL.js" />
+    <Content Include="Datepicker\lib\translations\pt_BR.js" />
+    <Content Include="Datepicker\lib\translations\pt_PT.js" />
+    <Content Include="Datepicker\lib\translations\ro_RO.js" />
+    <Content Include="Datepicker\lib\translations\ru_RU.js" />
+    <Content Include="Datepicker\lib\translations\sk_SK.js" />
+    <Content Include="Datepicker\lib\translations\sl_SI.js" />
+    <Content Include="Datepicker\lib\translations\sr_RS_cy.js" />
+    <Content Include="Datepicker\lib\translations\sr_RS_lt.js" />
+    <Content Include="Datepicker\lib\translations\sv_SE.js" />
+    <Content Include="Datepicker\lib\translations\th_TH.js" />
+    <Content Include="Datepicker\lib\translations\tr_TR.js" />
+    <Content Include="Datepicker\lib\translations\uk_UA.js" />
+    <Content Include="Datepicker\lib\translations\vi_VN.js" />
+    <Content Include="Datepicker\lib\translations\zh_CN.js" />
+    <Content Include="Datepicker\lib\translations\zh_TW.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="EditarDetallePedido.aspx" />
+    <Content Include="EditarDetallePedidoTemporal.aspx" />
+    <Content Include="EditarMenu.aspx" />
+    <Content Include="EditarPedido.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="Menus.aspx" />
+    <Content Include="NuevoMenu.aspx" />
+    <Content Include="NuevoPedido.aspx" />
+    <Content Include="Datepicker\lib\themes-source\base.date.less" />
+    <Content Include="Datepicker\lib\themes-source\base.less" />
+    <Content Include="Datepicker\lib\themes-source\base.time.less" />
+    <Content Include="Datepicker\lib\themes-source\classic.date.less" />
+    <Content Include="Datepicker\lib\themes-source\classic.less" />
+    <Content Include="Datepicker\lib\themes-source\classic.time.less" />
+    <Content Include="Datepicker\lib\themes-source\default.date.less" />
+    <Content Include="Datepicker\lib\themes-source\default.less" />
+    <Content Include="Datepicker\lib\themes-source\default.time.less" />
+    <Content Include="Datepicker\lib\themes-source\rtl.less" />
+    <Content Include="Datepicker\lib\themes-source\_variables.less" />
+    <Content Include="Datepicker\lib\translations\FORMATTING.md" />
+    <Content Include="Datepicker\lib\translations\NAMING.md" />
+    <Content Include="pickadate.js-3.6.2\.gitignore" />
+    <Content Include="pickadate.js-3.6.2\.jshintrc" />
+    <Content Include="pickadate.js-3.6.2\.travis.yml" />
+    <Content Include="pickadate.js-3.6.2\bower.json" />
+    <Content Include="pickadate.js-3.6.2\CHANGELOG.md" />
+    <Content Include="pickadate.js-3.6.2\CONTRIBUTING.md" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\base.date.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\base.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\base.time.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\classic.date.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\classic.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\classic.time.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\default.date.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\default.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\default.time.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\rtl.less" />
+    <Content Include="pickadate.js-3.6.2\lib\themes-source\_variables.less" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\FORMATTING.md" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\NAMING.md" />
+    <Content Include="pickadate.js-3.6.2\LICENSE.md" />
+    <Content Include="pickadate.js-3.6.2\package-lock.json" />
+    <Content Include="pickadate.js-3.6.2\package.json" />
+    <Content Include="pickadate.js-3.6.2\README.md" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Pedidos.aspx" />
+    <Content Include="pickadate.js-3.6.2\Gruntfile.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\legacy.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\picker.date.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\picker.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\picker.time.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\themes\classic.css" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\themes\classic.date.css" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\themes\classic.time.css" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\themes\default.css" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\themes\default.date.css" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\themes\default.time.css" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\themes\rtl.css" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\ar.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\bg_BG.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\bs_BA.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\ca_ES.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\cs_CZ.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\da_DK.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\de_DE.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\el_GR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\es_ES.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\et_EE.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\eu_ES.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\fa_IR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\fi_FI.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\fr_FR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\ge_GEO.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\gl_ES.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\he_IL.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\hi_IN.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\hr_HR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\hu_HU.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\id_ID.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\is_IS.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\it_IT.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\ja_JP.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\km_KH.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\ko_KR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\lt_LT.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\lv_LV.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\nb_NO.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\ne_NP.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\nl_NL.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\no_NO.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\pl_PL.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\pt_BR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\pt_PT.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\ro_RO.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\ru_RU.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\sk_SK.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\sl_SI.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\sr_RS_cy.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\sr_RS_lt.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\sv_SE.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\th_TH.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\tr_TR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\uk_UA.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\vi_VN.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\zh_CN.js" />
+    <Content Include="pickadate.js-3.6.2\lib\compressed\translations\zh_TW.js" />
+    <Content Include="pickadate.js-3.6.2\lib\legacy.js" />
+    <Content Include="pickadate.js-3.6.2\lib\picker.date.js" />
+    <Content Include="pickadate.js-3.6.2\lib\picker.js" />
+    <Content Include="pickadate.js-3.6.2\lib\picker.time.js" />
+    <Content Include="pickadate.js-3.6.2\lib\themes\classic.css" />
+    <Content Include="pickadate.js-3.6.2\lib\themes\classic.date.css" />
+    <Content Include="pickadate.js-3.6.2\lib\themes\classic.time.css" />
+    <Content Include="pickadate.js-3.6.2\lib\themes\default.css" />
+    <Content Include="pickadate.js-3.6.2\lib\themes\default.date.css" />
+    <Content Include="pickadate.js-3.6.2\lib\themes\default.time.css" />
+    <Content Include="pickadate.js-3.6.2\lib\themes\rtl.css" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\ar.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\bg_BG.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\bs_BA.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\ca_ES.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\cs_CZ.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\da_DK.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\de_DE.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\el_GR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\es_ES.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\et_EE.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\eu_ES.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\fa_IR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\fi_FI.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\fr_FR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\ge_GEO.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\gl_ES.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\he_IL.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\hi_IN.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\hr_HR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\hu_HU.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\id_ID.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\is_IS.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\it_IT.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\ja_JP.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\km_KH.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\ko_KR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\lt_LT.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\lv_LV.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\nb_NO.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\ne_NP.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\nl_NL.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\pl_PL.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\pt_BR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\pt_PT.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\ro_RO.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\ru_RU.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\sk_SK.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\sl_SI.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\sr_RS_cy.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\sr_RS_lt.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\sv_SE.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\th_TH.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\tr_TR.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\uk_UA.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\vi_VN.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\zh_CN.js" />
+    <Content Include="pickadate.js-3.6.2\lib\translations\zh_TW.js" />
+    <Content Include="pickadate.js-3.6.2\tests\dev\date.htm" />
+    <Content Include="pickadate.js-3.6.2\tests\dev\time.htm" />
+    <Content Include="pickadate.js-3.6.2\tests\units\all.htm" />
+    <Content Include="pickadate.js-3.6.2\tests\units\base.js" />
+    <Content Include="pickadate.js-3.6.2\tests\units\date.js" />
+    <Content Include="pickadate.js-3.6.2\tests\units\time.js" />
+    <Content Include="pickadate.js-3.6.2\version-bump.js" />
+    <Content Include="pickadate.js-3.6.2\version-commit.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\MisFuncionesFront.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\SweetAlert.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="sweetalert2-master\.eslintrc.js" />
+    <Content Include="sweetalert2-master\assets\GitHub-social-preview.png" />
+    <Content Include="sweetalert2-master\assets\swal2-logo-square.png" />
+    <Content Include="sweetalert2-master\assets\swal2-logo.png" />
+    <Content Include="sweetalert2-master\assets\sweetalert2.gif" />
+    <Content Include="sweetalert2-master\cypress\.eslintrc.js" />
+    <Content Include="sweetalert2-master\cypress\integration\accessibility.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\api.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\bindClickHandler.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\clickConfirm.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\close.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\getFocusableElements.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\getIcon.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\getIcons.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\getInput.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\getQueueStep.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\input.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\showLoading.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\timer.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\methods\update.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\customClass.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\grow.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\html.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\icon.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\image.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\inputAttributes.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\inputValue.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\padding.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\position.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\preConfirm.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\preDeny.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\progressSteps.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\showClass.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\stopKeydownPropagation.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\target.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\template.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\params\validationMessage.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\scrollbar.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\tests.spec.js" />
+    <Content Include="sweetalert2-master\cypress\integration\toast.spec.js" />
+    <Content Include="sweetalert2-master\cypress\plugins\index.js" />
+    <Content Include="sweetalert2-master\cypress\styles.css" />
+    <Content Include="sweetalert2-master\cypress\support\ci.js" />
+    <Content Include="sweetalert2-master\cypress\support\commands.js" />
+    <Content Include="sweetalert2-master\cypress\support\index.js" />
+    <Content Include="sweetalert2-master\cypress\utils.js" />
+    <Content Include="sweetalert2-master\gulpfile.js" />
+    <Content Include="sweetalert2-master\karma.conf.js" />
+    <Content Include="sweetalert2-master\release.config.js" />
+    <Content Include="sweetalert2-master\src\constants.js" />
+    <Content Include="sweetalert2-master\src\globalState.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\buttons-handlers.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\close.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\enable-disable-elements.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\getInput.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\hideLoading.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\keydown-handler.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\popup-click-handler.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\progress-steps.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\update.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\validation-message.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\_destroy.js" />
+    <Content Include="sweetalert2-master\src\instanceMethods\_main.js" />
+    <Content Include="sweetalert2-master\src\privateMethods.js" />
+    <Content Include="sweetalert2-master\src\privateProps.js" />
+    <Content Include="sweetalert2-master\src\staticMethods.js" />
+    <Content Include="sweetalert2-master\src\staticMethods\argsToParams.js" />
+    <Content Include="sweetalert2-master\src\staticMethods\bindClickHandler.js" />
+    <Content Include="sweetalert2-master\src\staticMethods\dom.js" />
+    <Content Include="sweetalert2-master\src\staticMethods\fire.js" />
+    <Content Include="sweetalert2-master\src\staticMethods\mixin.js" />
+    <Content Include="sweetalert2-master\src\staticMethods\queue.js" />
+    <Content Include="sweetalert2-master\src\staticMethods\showLoading.js" />
+    <Content Include="sweetalert2-master\src\staticMethods\timer.js" />
+    <Content Include="sweetalert2-master\src\SweetAlert.js" />
+    <Content Include="sweetalert2-master\src\sweetalert2.js" />
+    <Content Include="sweetalert2-master\src\utils\aria.js" />
+    <Content Include="sweetalert2-master\src\utils\classes.js" />
+    <Content Include="sweetalert2-master\src\utils\defaultInputValidators.js" />
+    <Content Include="sweetalert2-master\src\utils\DismissReason.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\animationEndEvent.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\domUtils.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\getters.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\index.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\init.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\inputUtils.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\measureScrollbar.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\parseHtmlToContainer.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\render.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderActions.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderCloseButton.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderContainer.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderContent.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderFooter.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderHeader.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderIcon.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderImage.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderInput.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderPopup.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderProgressSteps.js" />
+    <Content Include="sweetalert2-master\src\utils\dom\renderers\renderTitle.js" />
+    <Content Include="sweetalert2-master\src\utils\getTemplateParams.js" />
+    <Content Include="sweetalert2-master\src\utils\ieFix.js" />
+    <Content Include="sweetalert2-master\src\utils\iosFix.js" />
+    <Content Include="sweetalert2-master\src\utils\isNodeEnv.js" />
+    <Content Include="sweetalert2-master\src\utils\openPopup.js" />
+    <Content Include="sweetalert2-master\src\utils\params.js" />
+    <Content Include="sweetalert2-master\src\utils\scrollbarFix.js" />
+    <Content Include="sweetalert2-master\src\utils\setParameters.js" />
+    <Content Include="sweetalert2-master\src\utils\Timer.js" />
+    <Content Include="sweetalert2-master\src\utils\utils.js" />
+    <Content Include="sweetalert2-master\test\.eslintrc.js" />
+    <Content Include="sweetalert2-master\test\jest\jest.test.js" />
+    <Content Include="sweetalert2-master\test\qunit\a11y.js" />
+    <Content Include="sweetalert2-master\test\qunit\api\api.js" />
+    <Content Include="sweetalert2-master\test\qunit\api\bindClickHandler.js" />
+    <Content Include="sweetalert2-master\test\qunit\api\mixins.js" />
+    <Content Include="sweetalert2-master\test\qunit\browsers\ie.js" />
+    <Content Include="sweetalert2-master\test\qunit\focus-trap.js" />
+    <Content Include="sweetalert2-master\test\qunit\focus.js" />
+    <Content Include="sweetalert2-master\test\qunit\helpers.js" />
+    <Content Include="sweetalert2-master\test\qunit\jquery.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\clickConfirm.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\close.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\getFocusableElements.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\getIcon.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\getIcons.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\getQueueStep.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\getTimerLeft.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\getTimerProgressBar.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\hideLoading.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\increaseTimer.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\isTimerRunning.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\resumeTimer.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\showLoading.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\stopTimer.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\toggleTimer.js" />
+    <Content Include="sweetalert2-master\test\qunit\methods\update.js" />
+    <Content Include="sweetalert2-master\test\qunit\outside-click.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\animation.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\customClass.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\grow.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\html.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\icon.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\iconColor.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\iconHtml.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\image.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\input.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\inputAttributes.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\inputLabel.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\inputValue.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\padding.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\positioning.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\preConfirm.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\preDeny.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\progressSteps.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\showClass.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\stopKeydownPropagation.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\target.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\template.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\type.js" />
+    <Content Include="sweetalert2-master\test\qunit\params\validationMessage.js" />
+    <Content Include="sweetalert2-master\test\qunit\queue.js" />
+    <Content Include="sweetalert2-master\test\qunit\rtl.js" />
+    <Content Include="sweetalert2-master\test\qunit\tests.js" />
+    <Content Include="sweetalert2-master\test\qunit\toast.js" />
+    <Content Include="sweetalert2-master\test\qunit\validation.js" />
+    <Content Include="sweetalert2-master\test\require-in-node.js" />
+    <Content Include="sweetalert2-master\test\sandbox.html" />
+    <Content Include="sweetalert2-master\tools\build-dist.js" />
+    <Content Include="sweetalert2-master\tools\purge-jsdelivr.js" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contactame.aspx.cs">
+      <DependentUpon>Contactame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contactame.aspx.designer.cs">
+      <DependentUpon>Contactame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentas.aspx.cs">
+      <DependentUpon>Cuentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuentas.aspx.designer.cs">
+      <DependentUpon>Cuentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarDetallePedido.aspx.cs">
+      <DependentUpon>EditarDetallePedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarDetallePedido.aspx.designer.cs">
+      <DependentUpon>EditarDetallePedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarDetallePedidoTemporal.aspx.cs">
+      <DependentUpon>EditarDetallePedidoTemporal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarDetallePedidoTemporal.aspx.designer.cs">
+      <DependentUpon>EditarDetallePedidoTemporal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarMenu.aspx.cs">
+      <DependentUpon>EditarMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarMenu.aspx.designer.cs">
+      <DependentUpon>EditarMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPedido.aspx.cs">
+      <DependentUpon>EditarPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarPedido.aspx.designer.cs">
+      <DependentUpon>EditarPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menus.aspx.cs">
+      <DependentUpon>Menus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus.aspx.designer.cs">
+      <DependentUpon>Menus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoMenu.aspx.cs">
+      <DependentUpon>NuevoMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoMenu.aspx.designer.cs">
+      <DependentUpon>NuevoMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos.aspx.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos.aspx.designer.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoPedido.aspx.cs">
+      <DependentUpon>NuevoPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoPedido.aspx.designer.cs">
+      <DependentUpon>NuevoPedido.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Imagenes\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="sweetalert2-master\.babelrc" />
+    <Content Include="sweetalert2-master\.editorconfig" />
+    <Content Include="sweetalert2-master\.github\CODE_OF_CONDUCT.md" />
+    <Content Include="sweetalert2-master\.github\FUNDING.yml" />
+    <Content Include="sweetalert2-master\.github\ISSUE_TEMPLATE\01_bug_report.md" />
+    <Content Include="sweetalert2-master\.github\ISSUE_TEMPLATE\02_feature_request.md" />
+    <Content Include="sweetalert2-master\.github\ISSUE_TEMPLATE\03_question.md" />
+    <Content Include="sweetalert2-master\.github\workflows\ci.yml" />
+    <Content Include="sweetalert2-master\.github\workflows\coverage.yml" />
+    <Content Include="sweetalert2-master\.github\workflows\cron.yml" />
+    <Content Include="sweetalert2-master\.gitignore" />
+    <Content Include="sweetalert2-master\.stylelintrc.json" />
+    <Content Include="sweetalert2-master\CHANGELOG.md" />
+    <Content Include="sweetalert2-master\cypress.json" />
+    <Content Include="sweetalert2-master\DONATIONS.md" />
+    <Content Include="sweetalert2-master\LICENSE" />
+    <Content Include="sweetalert2-master\package.json" />
+    <Content Include="sweetalert2-master\README.md" />
+    <Content Include="sweetalert2-master\SECURITY.md" />
+    <Content Include="sweetalert2-master\SPONSORS.md" />
+    <Content Include="sweetalert2-master\src\scss\_animations.scss" />
+    <Content Include="sweetalert2-master\src\scss\_body.scss" />
+    <Content Include="sweetalert2-master\src\scss\_core.scss" />
+    <Content Include="sweetalert2-master\src\scss\_mixins.scss" />
+    <Content Include="sweetalert2-master\src\scss\_polyfills.scss" />
+    <Content Include="sweetalert2-master\src\scss\_theming.scss" />
+    <Content Include="sweetalert2-master\src\scss\_toasts-animations.scss" />
+    <Content Include="sweetalert2-master\src\scss\_toasts-body.scss" />
+    <Content Include="sweetalert2-master\src\scss\_toasts.scss" />
+    <Content Include="sweetalert2-master\src\sweetalert2.scss" />
+    <Content Include="sweetalert2-master\src\variables.scss" />
+    <Content Include="sweetalert2-master\tools\deploy-to-netlify.sh" />
+    <Content Include="sweetalert2-master\yarn.lock" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bussiness\Bussiness.csproj">
+      <Project>{935e4b5b-0d79-4a87-9ca8-74484de32b12}</Project>
+      <Name>Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{9676b16c-5a3e-48dd-85b0-b369e4573ac0}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="sweetalert2-master\sweetalert2.d.ts" />
+    <TypeScriptCompile Include="sweetalert2-master\test\ts\dist-sweetalert2.ts" />
+    <TypeScriptCompile Include="sweetalert2-master\test\ts\simple-usage.ts" />
+    <TypeScriptCompile Include="sweetalert2-master\test\ts\src-sweetalert2.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50347</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44363/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
