@@ -159,6 +159,24 @@ namespace Pizzeria
         protected global::System.Web.UI.WebControls.GridView gridTipoProductoPedidosList;
 
         /// <summary>
+        /// Control rbtnEmpanadas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rbtnEmpanadas;
+
+        /// <summary>
+        /// Control txtCantidadEmpanadas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCantidadEmpanadas;
+
+        /// <summary>
         /// Control lblTotal.
         /// </summary>
         /// <remarks>

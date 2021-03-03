@@ -44,9 +44,10 @@
             </div>           
         </div>
         <div class="jumbotron">
+           
             <h3>Pedido:</h3>
             <br />
-            <div style="width: 561px">
+            <dv sityle="width: 561px;border-style: none; border-width: 4px;">
                 <asp:DropDownList ID="DropDownProducto" runat="server" AutoPostBack="True" class="tamaño-dropDownlist" OnSelectedIndexChanged="DropDownProducto_SelectedIndexChanged" style="border-radius:4px"  >
                 <asp:ListItem Selected="True" Value="Seleccione"> Seleccione </asp:ListItem>      
             </asp:DropDownList>
@@ -59,7 +60,7 @@
                 <asp:ListItem Value="MOLDE"> MOLDE </asp:ListItem>
                 <asp:ListItem Value="PIEDRA"> PIEDRA </asp:ListItem>
             </asp:DropDownList>
-            </div>
+            </dv>
             <div style="Width:268px;  position: -webkit-sticky;" class="derechaBox" >
                 <asp:Label Text="Cantidad: " runat="server"  style="float:left"/>
                 <asp:TextBox text="" ID="txtCantidad" runat="server" Width="108px" class="form-control" style="float:left" Height="24px"/> 
@@ -89,8 +90,19 @@
                 <SortedDescendingCellStyle BackColor="#FFFDF8" />
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
-                   
-            <div style="Width:171px; height: 34px;" class="derechaBox">
+            <div style="border-style:solid;border-width: 1px; height: 154px; border-color:Highlight">
+                <br />
+            <div style="float:left; padding-left:10px; height: 122px;">
+                Empanadas:
+                <asp:RadioButtonList ID="rbtnEmpanadas" runat="server">
+                    <asp:ListItem Text="Media-Docena" />
+                    <asp:ListItem Text="Docena" />
+                </asp:RadioButtonList>
+                Cantidad:
+                <asp:TextBox ID="txtCantidadEmpanadas" runat="server" class="derechaBox form-control" Height="24px"/>
+            </div> 
+               
+            <div style="Width:171px; height: 34px; padding:10px; padding-right:10px" class="derechaBox">
                    <asp:Label id="lblTotal" Text="Total: " runat="server" class="medidaBox text-align:left" position="static" />
                  <asp:TextBox id="txtTotal" runat="server" Width="115px" display="inline-block"  Enabled="false" CssClase="derechaBox form-control" Height="23px" Style="border-radius:4px"/>  
              
@@ -98,12 +110,12 @@
             <br />
             <br />
             <br />
-            <div style="Width:179px" class="derechaBox">                 
-                <asp:Button Text="Eliminar" Id="btnEliminarPedido" runat="server" OnClick="btnEliminarPedido_Click"  class="derechaBox btn btn-primary "/>
+            <div style="Width:179px;padding-right:10px;" class="derechaBox">                 
+                <asp:Button Text="Eliminar" Id="btnEliminarPedido" runat="server" OnClick="btnEliminarPedido_Click"  class="derechaBox btn btn-primary " />
                 <asp:Button Text="Editar" ID="btnEditar" runat="server" OnClick="btnEditar_Click" class="izquierdaBox btn btn-primary "/>
             </div>
-            
         </div>
+            <br />
         <div>  
             <asp:Label Text="Modo de Pago: " runat="server" />
             <br />
@@ -124,5 +136,6 @@
             <asp:Button id="btnAceptar" Text="Aceptar" runat="server" OnClick="btnAceptar_Click" CssClass="btn btn-primary"/>
             <asp:Button id="btnCancelar"  Text="Cancelar" runat="server" OnClick="btnCancelar_Click" CssClass="btn btn-primary"/>
         </p>
+    </div>
     </div>
 </asp:Content>
